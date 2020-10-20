@@ -1,7 +1,7 @@
 --------------------------------
 [Version]
 --------------------------------
-v2
+v3
 
 
 --------------------------------
@@ -34,7 +34,7 @@ Install the software below to organize environment.
 Execute OpenAPI Generator and generate client for Python.  
 *There is a difference in the execution method of OpenAPI Generator depending on the installation. The example below is for Homebrew installation.
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v2/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v3/Route.yaml -g python -o ./
 ```
 
 Install setup.py directly under.
