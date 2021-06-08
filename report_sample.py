@@ -13,8 +13,8 @@ configuration = openapi_client.Configuration()
 # Configure OAuth2 access token for authorization: oAuth
 configuration.access_token = config_ini['DEFAULT']['access_token']
 
-# Defining host is optional and default to https://ads-search.yahooapis.jp/api/v4
-configuration.host = "https://ads-search.yahooapis.jp/api/v4"
+# Defining host is optional and default to https://ads-search.yahooapis.jp/api/v5
+configuration.host = "https://ads-search.yahooapis.jp/api/v5"
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class

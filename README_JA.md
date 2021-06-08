@@ -1,7 +1,7 @@
 --------------------------------
 【バージョン】
 --------------------------------
-v4
+v5
 
 
 --------------------------------
@@ -34,7 +34,7 @@ Python環境を構築するために、以下をインストールしてくだ�
 OpenAPI Generatorを実行しPython用のclientを生成します。
 ※インストール方法によってOpenAPI Generatorの実行方法に違いがあります。以下の例はHomebrewでインストールした場合です。
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v4/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v5/Route.yaml -g python -o ./
 ```
 
 直下にsetup.pyをインストールします。
