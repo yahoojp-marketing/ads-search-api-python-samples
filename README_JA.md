@@ -23,7 +23,7 @@ v5
 Python環境を構築するために、以下をインストールしてください。
 
 1. Python 3.8.2以上のバージョン
-2. OpenAPI generator 4.2.3以上
+2. OpenAPI generator 4.2.3以上の4.x系
 3. confディレクトリ配下にあるconfig.iniに各IDを記述します。
   - account_id          : アカウントIDを記述してください(必須)。
   - access_token        : アクセストークンを記述してください(必須)。

@@ -23,7 +23,7 @@ These code samples show how to use Python to call APIs.
 Install the software below to organize environment.
 
 1. Python 3.8.2 or above
-2. OpenAPI generator 4.2.3 or above
+2. OpenAPI generator 4.x series (4.2.3 or above)
 3. Specify each ID in conf/config.ini
   - account_id          : Account ID (required)
   - access_token        : Access token (required)
