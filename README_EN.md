@@ -13,7 +13,7 @@ These code samples show how to use Python to call APIs.
 [Contents]
 --------------------------------
 
-  - conf/config.yml          : Config files to specify Ids.
+  - conf/config.ini          : Config files to specify Ids.
 
   - report_sample.py       : Examples of creating report.
 
