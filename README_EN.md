@@ -1,7 +1,7 @@
 --------------------------------
 [Version]
 --------------------------------
-v9
+v10
 
 
 --------------------------------
@@ -22,8 +22,8 @@ These code samples show how to use Python to call APIs.
 --------------------------------
 Install the software below to organize environment.
 
-1. Python 3.8.2 or above
-2. OpenAPI generator 4.x series (4.2.3 or above)
+1. Python 3.8.13 or above
+2. OpenAPI generator 6.1.0
 3. Specify each ID in conf/config.ini
   - account_id          : Account ID (required)
   - access_token        : Access token (required)
@@ -34,7 +34,7 @@ Install the software below to organize environment.
 Execute OpenAPI Generator and generate client for Python.  
 *There is a difference in the execution method of OpenAPI Generator depending on the installation. The example below is for Homebrew installation.
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v9/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v10/Route.yaml -g python -o ./
 ```
 
 Install setup.py directly under.
