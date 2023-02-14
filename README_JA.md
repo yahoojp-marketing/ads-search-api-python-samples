@@ -1,7 +1,7 @@
 --------------------------------
 【バージョン】
 --------------------------------
-v9
+v10
 
 
 --------------------------------
@@ -22,8 +22,8 @@ v9
 --------------------------------
 Python環境を構築するために、以下をインストールしてください。
 
-1. Python 3.8.2以上のバージョン
-2. OpenAPI generator 4.2.3以上の4.x系
+1. Python 3.8.13以上のバージョン
+2. OpenAPI generator 6.1.0
 3. confディレクトリ配下にあるconfig.iniに各IDを記述します。
   - account_id          : アカウントIDを記述してください(必須)。
   - access_token        : アクセストークンを記述してください(必須)。
@@ -34,7 +34,7 @@ Python環境を構築するために、以下をインストールしてくだ�
 OpenAPI Generatorを実行しPython用のclientを生成します。
 ※インストール方法によってOpenAPI Generatorの実行方法に違いがあります。以下の例はHomebrewでインストールした場合です。
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v9/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v10/Route.yaml -g python -o ./
 ```
 
 直下にsetup.pyをインストールします。
