@@ -4,6 +4,7 @@ import time
 import sys
 import configparser
 import openapi_client
+import os
 from openapi_client.api.report_definition_service_api import ReportDefinitionServiceApi
 from openapi_client.model.report_definition import ReportDefinition
 from openapi_client.model.report_definition_service_download_selector import ReportDefinitionServiceDownloadSelector
@@ -14,7 +15,13 @@ from openapi_client.model.report_definition_service_report_type import ReportDef
 from openapi_client.model.report_definition_service_selector import ReportDefinitionServiceSelector
 from openapi_client.rest import ApiException
 from pprint import pprint
-config_ini = configparser.ConfigParser()
+
+class EnvInterpolation(configparser.BasicInterpolation):
+
+    def before_get(self, parser, section, option, value, defaults):
+        return os.path.expandvars(value)
+
+config_ini = configparser.ConfigParser(interpolation=EnvInterpolation())
 config_ini.read('conf/config.ini', encoding='utf-8')
 
 configuration = openapi_client.Configuration()
