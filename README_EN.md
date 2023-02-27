@@ -24,9 +24,9 @@ Install the software below to organize environment.
 
 1. Python 3.8.13 or above
 2. OpenAPI generator 6.1.0
-3. Specify each ID in conf/config.ini
-  - account_id          : Account ID (required)
-  - access_token        : Access token (required)
+3. Set the following environment variables.
+   - ACCOUNT_ID          : Account ID (required)
+   - ACCESS_TOKEN        : Access token (required)
 
 --------------------------------
 [How to execute Sample Code]
