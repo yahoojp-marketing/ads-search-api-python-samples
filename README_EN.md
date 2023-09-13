@@ -1,7 +1,7 @@
 --------------------------------
 [Version]
 --------------------------------
-v11
+v12
 
 
 --------------------------------
@@ -27,6 +27,7 @@ Install the software below to organize environment.
 3. Set the following environment variables.
    - ACCOUNT_ID          : Account ID (required)
    - ACCESS_TOKEN        : Access token (required)
+   - BASE_ACCOUNT_ID     : Account ID that should be specified in 'x-z-base-account-id' header. (required)
 
 --------------------------------
 [How to execute Sample Code]
@@ -34,7 +35,7 @@ Install the software below to organize environment.
 Execute OpenAPI Generator and generate client for Python.  
 *There is a difference in the execution method of OpenAPI Generator depending on the installation. The example below is for Homebrew installation.
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v11/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v12/Route.yaml -g python -o ./
 ```
 
 Install setup.py directly under.
