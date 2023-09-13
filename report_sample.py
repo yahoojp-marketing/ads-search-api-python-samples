@@ -28,13 +28,14 @@ configuration = openapi_client.Configuration()
 # Configure OAuth2 access token for authorization: oAuth
 configuration.access_token = config_ini['DEFAULT']['access_token']
 
-# Defining host is optional and default to https://ads-search.yahooapis.jp/api/v11
-configuration.host = "https://ads-search.yahooapis.jp/api/v11"
+# Defining host is optional and default to https://ads-search.yahooapis.jp/api/v12
+configuration.host = "https://ads-search.yahooapis.jp/api/v12"
 # Enter a context with an instance of the API client
 with openapi_client.ApiClient(configuration) as api_client:
     # Create an instance of the API class
     api_instance = ReportDefinitionServiceApi(api_client)
     job_id = 0
+    base_account_id=int(config_ini['DEFAULT']['base_account_id'])
 
     # Add
     report_definition = ReportDefinition(
@@ -50,7 +51,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     ) # ReportDefinitionServiceOperation |  (optional)
 
     try:
-        api_response = api_instance.report_definition_service_add_post(report_definition_service_operation=report_definition_service_operation)
+        api_response = api_instance.report_definition_service_add_post(base_account_id, report_definition_service_operation=report_definition_service_operation)
         job_id = api_response.rval.values[0].report_definition.report_job_id
     except ApiException as e:
         print("Exception when calling ReportDefinitionServiceApi->report_definition_service_add_post: %s\n" % e)
@@ -62,7 +63,7 @@ with openapi_client.ApiClient(configuration) as api_client:
     ) # ReportDefinitionServiceSelector |  (optional)
 
     try:
-        api_response = api_instance.report_definition_service_get_post(report_definition_service_selector=report_definition_service_selector)
+        api_response = api_instance.report_definition_service_get_post(base_account_id, report_definition_service_selector=report_definition_service_selector)
 
         num = 0
         while api_response.rval.values[0].report_definition.report_job_status != ReportDefinitionServiceReportJobStatus('COMPLETED'):
@@ -70,7 +71,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             num += 1
             if num >= 100:
                 sys.exit(1)
-            api_response = api_instance.report_definition_service_get_post(report_definition_service_selector=report_definition_service_selector)
+            api_response = api_instance.report_definition_service_get_post(base_account_id, report_definition_service_selector=report_definition_service_selector)
 
     except ApiException as e:
         print("Exception when calling ReportDefinitionServiceApi->report_definition_service_get_post: %s\n" % e)
@@ -83,6 +84,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     try:
         api_response = api_instance.report_definition_service_download_post(
+            base_account_id,
             report_definition_service_download_selector=report_definition_service_download_selector,
             _preload_content=False) # OpenAPI Python Bug 4847
         with open("download/sample.scv", mode="wb") as f:

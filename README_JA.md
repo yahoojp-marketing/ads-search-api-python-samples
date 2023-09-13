@@ -1,7 +1,7 @@
 --------------------------------
 【バージョン】
 --------------------------------
-v11
+v12
 
 
 --------------------------------
@@ -27,6 +27,7 @@ Python環境を構築するために、以下をインストールしてくだ�
 3. 以下の環境変数を設定します。
    - ACCOUNT_ID          : アカウントIDを記述してください(必須)。
    - ACCESS_TOKEN        : アクセストークンを記述してください(必須)。
+   - BASE_ACCOUNT_ID     : x-z-base-account-id ヘッダーで指定するアカウントID(必須)。
 
 --------------------------------
 【実行】
@@ -34,7 +35,7 @@ Python環境を構築するために、以下をインストールしてくだ�
 OpenAPI Generatorを実行しPython用のclientを生成します。
 ※インストール方法によってOpenAPI Generatorの実行方法に違いがあります。以下の例はHomebrewでインストールした場合です。
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v11/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v12/Route.yaml -g python -o ./
 ```
 
 直下にsetup.pyをインストールします。
