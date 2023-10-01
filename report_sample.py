@@ -1,4 +1,4 @@
-# Copyright (C) 2020 Yahoo Japan Corporation. All Rights Reserved.
+# Copyright (C) 2023 LY Corporation. All Rights Reserved.
 
 import time
 import sys
