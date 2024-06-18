@@ -1,7 +1,8 @@
 --------------------------------
 [Version]
---------------------------------
-v13
+Please refer to the following for the latest version.
+- [API Reference](https://ads-developers.yahoo.co.jp/reference/en)
+- [Release Note](https://ads-developers.yahoo.co.jp/en/ads-api/developers-guide/release-note.html)
 
 
 --------------------------------
@@ -32,10 +33,10 @@ Install the software below to organize environment.
 --------------------------------
 [How to execute Sample Code]
 --------------------------------
-Execute OpenAPI Generator and generate client for Python.  
+Execute OpenAPI Generator and generate client for Python. Please specify the latest version in ${VERSION}. 
 *There is a difference in the execution method of OpenAPI Generator depending on the installation. The example below is for Homebrew installation.
 ```
-openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/v13/Route.yaml -g python -o ./
+openapi-generator generate -i https://yahoojp-marketing.github.io/ads-search-api-documents/design/${VERSION}/Route.yaml -g python -o ./
 ```
 
 Install setup.py directly under.
