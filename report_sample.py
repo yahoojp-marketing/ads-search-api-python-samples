@@ -52,6 +52,7 @@ with openapi_client.ApiClient(configuration) as api_client:
 
     try:
         api_response = api_instance.report_definition_service_add_post(base_account_id, report_definition_service_operation=report_definition_service_operation)
+        print(api_response)
         job_id = api_response.rval.values[0].report_definition.report_job_id
     except ApiException as e:
         print("Exception when calling ReportDefinitionServiceApi->report_definition_service_add_post: %s\n" % e)
@@ -73,6 +74,8 @@ with openapi_client.ApiClient(configuration) as api_client:
                 sys.exit(1)
             api_response = api_instance.report_definition_service_get_post(base_account_id, report_definition_service_selector=report_definition_service_selector)
 
+        print(api_response)
+
     except ApiException as e:
         print("Exception when calling ReportDefinitionServiceApi->report_definition_service_get_post: %s\n" % e)
 
@@ -87,7 +90,7 @@ with openapi_client.ApiClient(configuration) as api_client:
             base_account_id,
             report_definition_service_download_selector=report_definition_service_download_selector,
             _preload_content=False) # OpenAPI Python Bug 4847
-        with open("download/sample.scv", mode="wb") as f:
+        with open("download/sample.csv", mode="wb") as f:
             f.write(api_response.read())
 
     except ApiException as e:
