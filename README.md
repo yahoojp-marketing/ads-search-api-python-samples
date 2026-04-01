@@ -1,4 +1,4 @@
-# Yahoo!広告 検索広告 API Pythonサンプルプログラム
+# LINEヤフー広告 検索広告 API Pythonサンプルプログラム
 
 Pythonサンプルプログラムです。
 
@@ -6,7 +6,7 @@ Pythonサンプルプログラムです。
 
 ### [日本語](./README_JA.md)
 
-# Yahoo! Ads Search Ads API Python sample code
+# LY Ads Search Ads API Python sample code
 
 Python sample code.
 
