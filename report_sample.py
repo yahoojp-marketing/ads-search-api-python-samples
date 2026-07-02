@@ -6,13 +6,13 @@ import configparser
 import openapi_client
 import os
 from openapi_client.api.report_definition_service_api import ReportDefinitionServiceApi
-from openapi_client.model.report_definition import ReportDefinition
-from openapi_client.model.report_definition_service_download_selector import ReportDefinitionServiceDownloadSelector
-from openapi_client.model.report_definition_service_operation import ReportDefinitionServiceOperation
-from openapi_client.model.report_definition_service_report_date_range_type import ReportDefinitionServiceReportDateRangeType
-from openapi_client.model.report_definition_service_report_job_status import ReportDefinitionServiceReportJobStatus
-from openapi_client.model.report_definition_service_report_type import ReportDefinitionServiceReportType
-from openapi_client.model.report_definition_service_selector import ReportDefinitionServiceSelector
+from openapi_client.models.report_definition import ReportDefinition
+from openapi_client.models.report_definition_service_download_selector import ReportDefinitionServiceDownloadSelector
+from openapi_client.models.report_definition_service_operation import ReportDefinitionServiceOperation
+from openapi_client.models.report_definition_service_report_date_range_type import ReportDefinitionServiceReportDateRangeType
+from openapi_client.models.report_definition_service_report_job_status import ReportDefinitionServiceReportJobStatus
+from openapi_client.models.report_definition_service_report_type import ReportDefinitionServiceReportType
+from openapi_client.models.report_definition_service_selector import ReportDefinitionServiceSelector
 from openapi_client.rest import ApiException
 from pprint import pprint
 
@@ -88,10 +88,9 @@ with openapi_client.ApiClient(configuration) as api_client:
     try:
         api_response = api_instance.report_definition_service_download_post(
             base_account_id,
-            report_definition_service_download_selector=report_definition_service_download_selector,
-            _preload_content=False) # OpenAPI Python Bug 4847
+            report_definition_service_download_selector=report_definition_service_download_selector)
         with open("download/sample.csv", mode="wb") as f:
-            f.write(api_response.read())
+            f.write(api_response)
 
     except ApiException as e:
         print("Exception when calling ReportDefinitionServiceApi->report_definition_service_download_post: %s\n" % e)

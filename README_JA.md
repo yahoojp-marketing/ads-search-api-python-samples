@@ -23,7 +23,7 @@
 Python環境を構築するために、以下をインストールしてください。
 
 1. Python 3.10以上のバージョン
-2. OpenAPI generator 6.1.0
+2. OpenAPI generator 7.22.0
 3. 以下の環境変数を設定します。
    - ACCOUNT_ID          : アカウントIDを記述してください(必須)。
    - ACCESS_TOKEN        : アクセストークンを記述してください(必須)。

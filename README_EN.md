@@ -22,7 +22,7 @@ These code samples show how to use Python to call APIs.
 Install the software below to organize environment.
 
 1. Python 3.10 or above
-2. OpenAPI generator 6.1.0
+2. OpenAPI generator 7.22.0
 3. Set the following environment variables.
    - ACCOUNT_ID          : Account ID (required)
    - ACCESS_TOKEN        : Access token (required)
